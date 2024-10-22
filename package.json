@@ -3,14 +3,41 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
-  "keywords": [],
-  "author": "",
+ "keywords": [
+    "Link Shortener",
+    "URL Shortening",
+    "Shorten Links",
+    "URL Shortener Service",
+    "Free URL Shortener",
+    "Custom URL Shortener",
+    "Trackable Links",
+    "Analytics for Short Links",
+    "URL Redirection",
+    "Shortened URLs",
+    "Link Management",
+    "Link Tracking",
+    "Social Media Links",
+    "QR Code Generator",
+    "Branded Links",
+    "Link Shortening API",
+    "Fast URL Shortener",
+    "Secure URL Shortening",
+    "Mobile-Friendly Links",
+    "Link Sharing Tools",
+    "SEO Friendly URL Shortener",
+    "Link Cloaking",
+    "URL Shortener for Businesses",
+    "Dynamic URL Shortener",
+    "Multi-Platform URL Shortener"
+],
+  "author": "nitesh sharma",
   "license": "ISC",
   "description": "",
   "dependencies": {
     "express": "^4.21.1",
-    "fs": "^0.0.1-security"
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
   }
 }
