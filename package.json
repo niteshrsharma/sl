@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node app.js"
   },
- "keywords": [
+  "keywords": [
     "Link Shortener",
     "URL Shortening",
     "Shorten Links",
@@ -31,13 +31,15 @@
     "URL Shortener for Businesses",
     "Dynamic URL Shortener",
     "Multi-Platform URL Shortener"
-],
-  "author": "nitesh sharma",
+  ],
+  "author": "ETREE",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "axios": "^1.7.7",
     "express": "^4.21.1",
     "fs": "^0.0.1-security",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "valid-url": "^1.0.9"
   }
 }

@@ -1,28 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free URL Shortener | Shorten Links Easily</title>
     <meta name="description" content="Easily shorten your URLs with our free and reliable link shortener. Track clicks, create custom links, and enhance your sharing experience. Perfect for social media and businesses.">
     <meta name="keywords" content="Link Shortener, URL Shortening, Free URL Shortener, Custom URL Shortener, Shorten Links, Trackable Links, Analytics for Short Links, Branded Links, SEO Friendly URL Shortener">
-    <meta name="author" content="Your Name or Company Name">
+    <meta name="author" content="ETREE">
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
     <link rel="canonical" href="https://www.yourwebsite.com/">
-    <script src="./axios.js"></script>
-    <link rel="stylesheet" href="">
     <link rel="stylesheet" href="./style.css">
+    <script src="./axios.js" defer></script>
 </head>
+
 <body>
-    <h1>Mini Link</h1>
 
-    <form id="linkForm">
-        <input type="text" id="linkInput" placeholder="Enter a link" required>
-        <button type="submit">Shorten</button>
-    </form>
+    <div class="loader"></div>
+    <header>
+        <img src="./assets/logo.png" alt="logo" id="logo">
+        <h1>Mini Link By E-TREE</h1>
+        <p>Your reliable link shortener for social media, marketing, and beyond!</p>
+    </header>
 
-    <div class="result" id="resultMessage"></div>
+    <main>
+        <section class="link-shortener">
+            <h2>Shorten Your Link</h2>
+            <form id="linkForm" onsubmit="shorten(); return false;">
+                <input type="text" id="linkInput" placeholder="Enter a link" required>
+                <button type="submit">Shorten</button>
+            </form>
+            <div class="result">
+                <p>Shortened Link: <a id="shortenedLink" href="" target="_blank"></a></p>
+            </div>
+        </section>
 
-    <script src="./functions.js">
-    </script>
+        <section class="check-click-count">
+            <h2>Check Click Count</h2>
+            <input type="text" id="placeholderInput" placeholder="Enter Link" required>
+            <button id="checkCountButton">Check Click Count</button>
+            <div id="checkCountResult"></div>
+        </section>
+
+        <section class="features">
+            <h2>Why Choose Mini Link?</h2>
+            <ul>
+                <li><strong>Track Your Links:</strong> Get real-time analytics on link performance, including click counts and geographic data.</li>
+                <li><strong>Custom Short Links:</strong> Create branded links that are memorable and easy to share.</li>
+                <li><strong>Secure and Fast:</strong> Our service is built with speed and security in mind, ensuring a smooth user experience.</li>
+                <li><strong>Simple Interface:</strong> User-friendly design makes shortening links a breeze for everyone!</li>
+                <li><strong>Free Forever:</strong> Enjoy our services without any hidden fees or subscriptions.</li>
+            </ul>
+        </section>
+
+        <section class="cta">
+            <h2>Get Started Now!</h2>
+            <p>Join thousands of users who trust Mini Link to simplify their sharing needs. Start shortening your links today!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ETREE. All rights reserved.</p>
+        <p>Follow us on <a href="#">Twitter</a>, <a href="#">Facebook</a>, and <a href="#">Instagram</a>.</p>
+    </footer>
+
+    <script src="./functions.js"></script>
 </body>
+
 </html>

@@ -1,28 +1,261 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    color: #343a40;
     padding: 20px;
 }
-h1 {
-    color: #333;
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
+
+.loader {
+    border: 16px solid #f3f3f3;
+    /* Light grey */
+    border-top: 16px solid #0a9e48;
+    /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    display: none;
+    height: 120px;
+    position: fixed;
+    top: calc(50% - 120px);
+    left: calc(50% - 120px);
+    transform: translate(-50%, -50%);
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+/* Main Form Styling */
+.link-shortener {
+    margin: 40px 0;
+}
+
 form {
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Allows inputs to wrap in smaller screens */
 }
+
+#logo {
+    border-radius: 50%;
+    height: 150px;
+}
+
 input[type="text"] {
+    padding: 12px;
     width: 300px;
-    padding: 10px;
-    margin-right: 10px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    /* Added box-shadow transition */
+    font-size: 1em;
+    /* Improved accessibility */
 }
+
+input[type="text"]:focus {
+    border-color: #0056b3;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
+    /* Added shadow on focus */
+}
+
 button {
-    padding: 10px 20px;
+    padding: 12px 20px;
     background-color: #007bff;
     color: white;
     border: none;
+    border-radius: 5px;
+    margin-left: 10px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    /* Added transform transition */
+    font-size: 1em;
+    /* Improved accessibility */
 }
+
 button:hover {
     background-color: #0056b3;
+    transform: translateY(-2px);
+    /* Slight lift effect on hover */
 }
+
+button:active {
+    transform: translateY(0);
+    /* Revert lift effect on click */
+}
+
+/* Result Section */
 .result {
     margin-top: 20px;
+    text-align: center;
+}
+
+.result a {
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.result a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styling */
+section {
+    margin: 40px 0;
+    padding: 30px;
+    /* Increased padding for better spacing */
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+/* Check Click Count Section */
+.check-click-count {
+    text-align: center;
+}
+
+.check-click-count input {
+    width: 250px;
+}
+
+/* Features Section */
+.features ul {
+    list-style-type: none;
+}
+
+.features li {
+    padding: 15px 0;
+    /* Added more padding for list items */
+}
+
+/* Call to Action Section */
+.cta {
+    text-align: center;
+    background: #007bff;
+    color: white;
+    padding: 30px;
+    /* Increased padding for emphasis */
+    border-radius: 10px;
+}
+
+.cta p {
+    font-size: 1.5em;
+    /* Increased font size for visibility */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1em;
+    /* Slightly increased footer font size */
+    color: #6c757d;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    input[type="text"] {
+        width: 80%;
+        /* Adjust input width for medium screens */
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .check-click-count input {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+        /* Adjust header size for medium screens */
+    }
+
+    header p {
+        font-size: 1.2em;
+        /* Adjust paragraph size for medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    input[type="text"] {
+        width: 90%;
+        /* Full width on small screens */
+    }
+
+    header h1 {
+        font-size: 2em;
+        /* Further reduce header size for small screens */
+    }
+
+    header p {
+        font-size: 1em;
+        /* Further reduce paragraph size for small screens */
+    }
+
+    button {
+        padding: 10px;
+        /* Smaller button padding on small screens */
+        font-size: 0.9em;
+        /* Smaller button font size on small screens */
+    }
+
+    .cta p {
+        font-size: 1.2em;
+        /* Smaller call-to-action text on small screens */
+    }
 }
